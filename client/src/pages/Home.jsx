@@ -1,18 +1,9 @@
  
-// src/pages/Home.jsx
+
 import React from "react";
-import "./Home.css"; // make sure this file exists
+import { useNavigate } from "react-router-dom"; 
+import "./Home.css";
 
-
-/*const Home = () => {
-  return (
-    <div style={{ backgroundColor: '#f0f0f0', minHeight: '100vh', padding: '2rem' }}>
-      <h1>Welcome to Taxi Booking</h1>
-    </div>
-  );
-};*/
-
- 
 const cars = [
   {
     name: "Rolls Royce",
@@ -35,6 +26,11 @@ const cars = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();  
+  const handleBook = (car) => {
+    navigate("/booking", { state: car });  
+  };
+
   return (
     <div className="home-container">
       <h2>Available Taxis</h2>
@@ -43,9 +39,9 @@ const Home = () => {
           <div className="car-card" key={index}>
             <img src={car.image} alt={car.name} />
             <h3>{car.name}</h3>
-            <p>{car.description}</p>
+            <p>{car.desc}</p>
             <p>{car.price}</p>
-            <button>Book Now</button>
+            <button onClick={() => handleBook(car)}>Book Now</button>
           </div>
         ))}
       </div>
@@ -53,9 +49,4 @@ const Home = () => {
   );
 };
 
-
- 
- 
-
-export default  Home;
-
+export default Home;

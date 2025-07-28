@@ -5,8 +5,7 @@ import "./MyBookings.css";
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
-  const userId = localStorage.getItem("userId"); // assuming this is set at login
-
+  const userId = localStorage.getItem("userId"); 
   useEffect(() => {
     const fetchBookings = async () => {
       try {

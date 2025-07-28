@@ -1,7 +1,7 @@
 const Booking = require('../models/Booking');
 const Taxi = require('../models/Taxi');
 
-// Create a booking
+ 
 exports.createBooking = async (req, res) => {
   try {
     const { userId, taxiId, startDate, endDate } = req.body;
@@ -16,8 +16,7 @@ exports.createBooking = async (req, res) => {
 
     const booking = new Booking({ userId, taxiId, startDate, endDate, totalPrice });
     await booking.save();
-
-    // Optional: Mark the taxi as unavailable
+ 
     taxi.available = false;
     await taxi.save();
 
@@ -26,8 +25,7 @@ exports.createBooking = async (req, res) => {
     res.status(400).json({ error: 'Booking failed' });
   }
 };
-
-// Get all bookings
+ 
 exports.getBookings = async (req, res) => {
   try {
     const bookings = await Booking.find().populate('userId taxiId');

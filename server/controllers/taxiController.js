@@ -1,6 +1,6 @@
 const Taxi = require('../models/Taxi');
 
-// Get all taxis
+ 
 exports.getTaxis = async (req, res) => {
   try {
     const taxis = await Taxi.find();
@@ -10,7 +10,7 @@ exports.getTaxis = async (req, res) => {
   }
 };
 
-// Add a new taxi
+ 
 exports.addTaxi = async (req, res) => {
   try {
     const { driverName, carModel, plateNumber, seats, pricePerDay } = req.body;

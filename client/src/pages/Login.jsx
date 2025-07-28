@@ -15,7 +15,7 @@ function Login() {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
       setMsg(res.data.message);
-      // Redirect or store user
+       
     } catch (err) {
       setMsg(err.response?.data?.message || 'Login failed');
     }
@@ -25,7 +25,7 @@ function Login() {
     <div>
       <div className="login-container">
   <h2>Login</h2>
-  {/* form */}
+   
 </div>
       <h2>Login</h2>
       {msg && <p>{msg}</p>}

@@ -38,4 +38,12 @@
     transform: rotate(360deg);
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #608d94;  /* Light gray background */
+  font-family: Arial, sans-serif;
+}
+
+ 
  

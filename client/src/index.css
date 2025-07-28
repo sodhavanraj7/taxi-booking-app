@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1b1bb0;
+  background-color: #d6be38;
 }
 
 h2 {
@@ -17,7 +17,7 @@ h2 {
 form {
   max-width: 400px;
   margin: auto;
-  background: rgb(140, 16, 16);
+  background: rgb(20, 126, 183);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);

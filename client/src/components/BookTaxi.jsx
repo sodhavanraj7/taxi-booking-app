@@ -1,6 +1,6 @@
  import React, { useState } from "react";
 import axios from "axios"; 
-import { useLocation } from "react-router-dom";
+import { useLocation ,  useNavigate } from "react-router-dom";
 
 
 const BookTaxi = () => {
@@ -16,11 +16,13 @@ const BookTaxi = () => {
       <p>{car.description}</p>
       <p>Price: ₹{car.price}/day</p>
 
-      {/* Add booking form here */}
+      {/* Add booking form here */} 
     </div>
+     
   );
 };
 
-export default BookTaxi;
+export default BookTaxi; 
 
 
+ 

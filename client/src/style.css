@@ -156,8 +156,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #facc15;
 }
-
-/* Hero Section */
+ 
 .hero {
   text-align: center;
   margin-top: 100px;
@@ -182,7 +181,7 @@ nav ul li a:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-/* Buttons */
+ 
 button, .btn {
   padding: 10px 20px;
   background-color: #facc15;
@@ -198,7 +197,7 @@ button:hover, .btn:hover {
   background-color: #eab308;
 }
 
-/* Responsive */
+ 
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -309,8 +308,7 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
-
-/* style.css */
+ 
 .card {
   border: 1px solid #ccc;
   border-radius: 10px;
