@@ -1,0 +1,33 @@
+.booking-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.booking-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-container label {
+  margin: 10px 0 5px;
+}
+
+.booking-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-container button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

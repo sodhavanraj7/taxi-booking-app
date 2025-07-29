@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d6be38;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  background: rgb(20, 126, 183);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 1px solid #d01b1b;
+}
+
+button {
+  background-color: #2979ff;
+  color: rgb(144, 24, 100);
+  font-weight: bold;
+  cursor: pointer;
+}
+

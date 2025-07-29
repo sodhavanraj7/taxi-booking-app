@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taxi Booking - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">TaxiBooking</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My Bookings</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="title">Available Taxis</h2>
+    <div class="taxi-container">
+      <div class="taxi-card">
+        <img src="car1.jpg" alt="RoyalTaxi">
+        <h3>Rolls Royce</h3>
+        <p>₹10/km • AC • 4 Seater</p>
+        <button onclick="bookTaxi('Rolls Royce ')">Book Now</button>
+      </div>
+
+      <div class="taxi-card">
+        <img src="car2.jpg" alt="SUV Taxi">
+        <h3>G-Wagon</h3>
+        <p>₹15/km • AC • 6 Seater</p>
+        <button onclick="bookTaxi('G-Wagon')">Book Now</button>
+      </div>
+
+      <div class="taxi-card">
+        <img src="car3.jpg" alt="Mini Cooper Taxi">
+        <h3>Lamborghini aventador</h3>
+        <p>₹8/km • Non-AC • 4 Seater</p>
+        <button onclick="bookTaxi('Lamborghini aventador')">Book Now</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TaxiBooking. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function bookTaxi(model) {
+      alert(`You clicked to book: ${model}`);
+       
+    }
+  </script>
+</body>
+</html>
+
