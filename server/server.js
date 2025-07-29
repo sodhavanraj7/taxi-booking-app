@@ -30,7 +30,7 @@ app.use('/api/auth', authRoutes);
 app.use("/api/bookings", bookingRoutes);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); */
-
+/*
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -70,3 +70,45 @@ app.get("/", (req, res) => res.send("🚖 Taxi Booking Server is running"));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/bookings", bookingRoutes);
+*/
+
+const express = require("express");                 // ✅ Express imported
+const mongoose = require("mongoose");               // ✅ MongoDB
+const cors = require("cors");                       // ✅ CORS enabled
+const dotenv = require("dotenv");                   // ✅ .env loaded
+const authRoutes = require('./routes/auth');        // ✅ Auth router imported
+const bookingRoutes = require("./routes/booking");  // ✅ Booking router imported
+
+dotenv.config();
+
+const app = express();
+
+// ✅ CORS middleware with frontend origin allowed
+app.use(cors({
+  origin: 'https://taxi-booking-app-sjvc-8ppur2foh-sodhavanraj7s-projects.vercel.app',
+  credentials: true
+}));
+
+app.use(express.json());  // ✅ Body parser
+
+// ✅ Route middleware (Step 3 requirement)
+app.use("/api/auth", authRoutes);
+app.use("/api/bookings", bookingRoutes);
+
+// ✅ DB connection
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("✅ MongoDB connected");
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+// ✅ Health check route
+app.get("/", (req, res) => res.send("🚖 Taxi Booking Server is running"));
